@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:stretch
 LABEL maintainer="Kane Valentine <kane@cute.im>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -12,7 +12,7 @@ RUN set -ex; \
 	savedAptMark="$(apt-mark showmanual)"; \
 	\
 	apt-get update; \
-	apt-get install -qq --no-install-recommends \
+	apt-get install -y --no-install-recommends \
 		build-essential \
 		ca-certificates \
 		cmake \
@@ -20,7 +20,6 @@ RUN set -ex; \
 		libev-dev \
 	; \
 	\
-	git submodule update --init; \
 	cmake $PWD; \
 	make && make install; \
 	\
