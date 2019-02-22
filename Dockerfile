@@ -4,8 +4,8 @@ LABEL maintainer="Kane Valentine <kane.valentine@shuppet.com>"
 ENV DEBIAN_FRONTEND noninteractive
 
 ADD $PWD/eredis /usr/src/eredis
+
 WORKDIR /usr/src/eredis
-RUN ls -lah
 
 RUN set -ex; \
 	\
