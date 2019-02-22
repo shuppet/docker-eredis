@@ -1,5 +1,5 @@
 FROM debian:stretch
-LABEL maintainer="Kane Valentine <kane@cute.im>"
+LABEL maintainer="Kane Valentine <kane.valentine@shuppet.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
